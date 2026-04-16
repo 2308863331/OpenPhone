@@ -149,6 +149,8 @@ const currentComponent = computed(() => components[currentPage.value])
   padding-top: 0;
   min-height: 100vh;
   overflow: hidden;
+  position: fixed;
+  inset: 0;
 }
 
 .phone-mode-toggle {

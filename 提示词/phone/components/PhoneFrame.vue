@@ -27,13 +27,12 @@
 
 <style scoped>
 .phone-universe {
-  min-height: 100vh;
+  position: fixed;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(160deg, #faf8f5 0%, #f5ece4 50%, #ede4db 100%);
-  padding: 60px 40px;
-  position: relative;
   overflow: hidden;
 }
 

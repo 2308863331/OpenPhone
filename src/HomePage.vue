@@ -29,22 +29,18 @@
 
     <!-- 主内容区 -->
     <div class="main-content">
-      <!-- 锦书伴侣 -->
       <div v-if="currentFeature === 'companion'" class="feature-section">
         <JinShuCompanion />
       </div>
 
-      <!-- 相册画廊 -->
       <div v-else-if="currentFeature === 'photo'" class="feature-section">
         <PhotoGallery />
       </div>
 
-      <!-- 天气水晶 -->
       <div v-else-if="currentFeature === 'weather'" class="feature-section">
         <WeatherCrystal />
       </div>
 
-      <!-- 视频播放器 -->
       <div v-else-if="currentFeature === 'video'" class="feature-section">
         <CandyVideoPlayer 
           video-src="https://common.cnblogs.com/images/cnblogs_com/blogs/812134/galleries/123456789.mp4"
@@ -52,9 +48,56 @@
         />
       </div>
 
-      <!-- 粒子墙 -->
       <div v-else-if="currentFeature === 'particle'" class="feature-section">
         <MysteryWall />
+      </div>
+
+      <div v-else-if="currentFeature === 'radio'" class="feature-section">
+        <DuoRadio />
+      </div>
+
+      <div v-else-if="currentFeature === 'diner'" class="feature-section">
+        <MidnightDiner />
+      </div>
+
+      <div v-else-if="currentFeature === 'romantic'" class="feature-section">
+        <JinShuRomantic />
+      </div>
+
+      <div v-else-if="currentFeature === 'firefly'" class="feature-section">
+        <FireflyDate />
+      </div>
+
+      <div v-else-if="currentFeature === 'fate'" class="feature-section">
+        <RedThreadFate />
+      </div>
+
+      <div v-else-if="currentFeature === 'dreamweaver'" class="feature-section">
+        <DreamWeaver />
+      </div>
+
+      <div v-else-if="currentFeature === 'bottle'" class="feature-section">
+        <DriftBottle />
+      </div>
+
+      <div v-else-if="currentFeature === 'mystery-new'" class="feature-section">
+        <MysteryWallNew />
+      </div>
+
+      <div v-else-if="currentFeature === 'timecapsule'" class="feature-section">
+        <TimeCapsule />
+      </div>
+
+      <div v-else-if="currentFeature === 'timetransaction'" class="feature-section">
+        <TimeTransaction />
+      </div>
+
+      <div v-else-if="currentFeature === 'travel'" class="feature-section">
+        <TravelDiary />
+      </div>
+
+      <div v-else-if="currentFeature === 'treehouse'" class="feature-section">
+        <TreeHouse />
       </div>
     </div>
 
@@ -66,12 +109,24 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import JinShuCompanion from '../JinShuCompanion.vue'
 import PhotoGallery from '../Photo.vue'
 import WeatherCrystal from '../WeatherCrystal.vue'
 import CandyVideoPlayer from '../CandyVideoPlayer.vue'
 import MysteryWall from '../no/MysteryWall.vue'
+import DuoRadio from '../DuoRadio.vue'
+import MidnightDiner from '../MidnightDiner.vue'
+import JinShuRomantic from '../JinShuRomantic/JinShuRomantic.vue'
+import FireflyDate from '../FireflyDate.vue'
+import RedThreadFate from '../RedThreadFate.vue'
+import DreamWeaver from '../DreamWeaver.vue'
+import DriftBottle from '../no/drift-bottle-lover.vue'
+import MysteryWallNew from '../noval/MysteryWall.vue'
+import TimeCapsule from '../TimeCapsule.vue'
+import TimeTransaction from '../TimeTransaction.vue'
+import TravelDiary from '../Travel.vue'
+import TreeHouse from './TreeHouse.vue'
 
 const currentFeature = ref('companion')
 const isNightMode = ref(false)
@@ -79,9 +134,21 @@ const isNightMode = ref(false)
 const features = [
   { key: 'companion', name: '锦书伴侣', icon: '📖' },
   { key: 'photo', name: '相册画廊', icon: '📷' },
-  { key: 'weather', name: '天气水晶', icon: '🔮' },
+  { key: 'weather', name: '气象水晶', icon: '🔮' },
   { key: 'video', name: '视频播放', icon: '▶️' },
-  { key: 'particle', name: '粒子互动', icon: '✨' }
+  { key: 'particle', name: '粒子互动', icon: '✨' },
+  { key: 'radio', name: '电台', icon: '📻' },
+  { key: 'diner', name: '深夜食堂', icon: '🍜' },
+  { key: 'romantic', name: '锦书', icon: '💌' },
+  { key: 'firefly', name: '萤火之约', icon: '🌙' },
+  { key: 'fate', name: '红线姻缘', icon: '🔴' },
+  { key: 'dreamweaver', name: '织梦者', icon: '🕸️' },
+  { key: 'bottle', name: '漂流瓶', icon: '🧊' },
+  { key: 'mystery-new', name: '秘闻墙', icon: '🧱' },
+  { key: 'timecapsule', name: '时间胶囊', icon: '💊' },
+  { key: 'timetransaction', name: '时光当铺', icon: '⏳' },
+  { key: 'travel', name: '旅行日记', icon: '✈️' },
+  { key: 'treehouse', name: '秘密基地', icon: '🏠' }
 ]
 
 function switchFeature(featureKey) {
@@ -150,10 +217,6 @@ onMounted(() => {
   text-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
-.page-container.night-mode .page-title {
-  color: #d8d0c5;
-}
-
 .page-subtitle {
   font-size: 1rem;
   color: #8a7a6a;
@@ -166,22 +229,22 @@ onMounted(() => {
   z-index: 10;
   display: flex;
   justify-content: center;
-  gap: 12px;
-  padding: 20px;
+  gap: 10px;
+  padding: 16px 20px;
   flex-wrap: wrap;
 }
 
 .feature-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
+  gap: 6px;
+  padding: 9px 18px;
   border: none;
-  border-radius: 24px;
+  border-radius: 20px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   color: #6a5a4a;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -203,7 +266,7 @@ onMounted(() => {
 }
 
 .feature-icon {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .feature-name {
@@ -247,11 +310,6 @@ onMounted(() => {
   letter-spacing: 1px;
 }
 
-.page-container.night-mode .page-footer {
-  color: #a8988a;
-}
-
-/* 响应式 */
 @media (max-width: 768px) {
   .page-title {
     font-size: 2rem;
@@ -259,13 +317,13 @@ onMounted(() => {
   }
 
   .feature-nav {
-    gap: 8px;
-    padding: 16px;
+    gap: 6px;
+    padding: 12px;
   }
 
   .feature-btn {
-    padding: 10px 16px;
-    font-size: 13px;
+    padding: 8px 14px;
+    font-size: 12px;
   }
 
   .main-content {
