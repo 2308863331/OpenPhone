@@ -2,16 +2,7 @@
   <div class="app-container">
     <nav v-if="viewMode === 'fullscreen'" class="app-nav">
       <h1 class="nav-title">数字花园</h1>
-      <div class="nav-links">
-        <button
-          v-for="page in pages"
-          :key="page.key"
-          class="nav-btn"
-          :class="{ active: currentPage === page.key }"
-          @click="currentPage = page.key">
-          {{ page.name }}
-        </button>
-      </div>
+      <div style="flex:1"></div>
       <button class="mode-toggle-btn" @click="viewMode = 'phone'" title="切换到小手机">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
       </button>
@@ -115,10 +106,22 @@ const currentComponent = computed(() => components[currentPage.value])
   background: rgba(255, 253, 250, 0.85);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(200, 180, 160, 0.15);
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .nav-title {
   font-size: 18px; font-weight: 600; color: #5a4a3a; letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.nav-mobile-toggle {
+  display: none;
+  width: 36px; height: 36px;
+  border: none; border-radius: 8px;
+  background: rgba(230, 190, 170, 0.2);
+  cursor: pointer; align-items: center; justify-content: center;
+  color: #6a5a4a; flex-shrink: 0;
 }
 
 .nav-links {
@@ -130,6 +133,7 @@ const currentComponent = computed(() => components[currentPage.value])
   padding: 8px 18px; border: none; border-radius: 20px;
   background: transparent; color: #8a7a6a; font-size: 14px;
   cursor: pointer; border: 1px solid transparent;
+  white-space: nowrap;
 }
 .nav-btn:hover { background: rgba(220, 180, 160, 0.12); color: #6a5a4a; }
 .nav-btn.active {
@@ -143,7 +147,7 @@ const currentComponent = computed(() => components[currentPage.value])
   border: 1px solid rgba(200, 180, 160, 0.25);
   background: rgba(255, 253, 250, 0.7);
   cursor: pointer; display: flex; align-items: center; justify-content: center;
-  color: #8a7a6a;
+  color: #8a7a6a; flex-shrink: 0;
 }
 .mode-toggle-btn:hover { background: rgba(230, 190, 170, 0.2); }
 

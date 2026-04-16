@@ -3,8 +3,8 @@
     class="grid-item"
     :class="[sizeClass, { 'dragging-active': isDragging }]"
     :style="itemStyle"
-    @mousedown.prevent="onDragStart($event)"
-    @touchstart.prevent="onDragStart($event)"
+    @mousedown="onDragStart($event)"
+    @touchstart="onDragStart($event)"
     @click="onTap">
     <template v-if="item.size === 'standard'">
       <div class="icon-visual" :style="{ background: item.gradient }">
@@ -78,7 +78,7 @@ const props = defineProps({
 
 const emit = defineEmits(['tap'])
 
-const { draggingUid, initiateDrag } = useDrag()
+const { draggingUid, initiateDrag, context: dragContext } = useDrag()
 
 const sizeClass = computed(() => props.item.size === 'large' ? 'large-item' : 'standard-item')
 
@@ -93,7 +93,7 @@ const onDragStart = (event) => {
 }
 
 const onTap = () => {
-  if (draggingUid.value === props.item.uid) return
+  if (draggingUid.value === props.item.uid || dragContext.hasMoved) return
   emit('tap', props.item)
 }
 </script>
