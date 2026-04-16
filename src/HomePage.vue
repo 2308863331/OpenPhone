@@ -57,11 +57,6 @@
         />
       </div>
 
-      <!-- 文字提纯 -->
-      <div v-else-if="currentFeature === 'text'" class="feature-section">
-        <TextPurify />
-      </div>
-
       <!-- 粒子墙 -->
       <div v-else-if="currentFeature === 'particle'" class="feature-section">
         <MysteryWall />
@@ -82,7 +77,6 @@ import PhotoGallery from '../Photo.vue'
 import WeatherCrystal from '../WeatherCrystal.vue'
 import ZenForest from '../ZenForest.vue'
 import CandyVideoPlayer from '../CandyVideoPlayer.vue'
-import TextPurify from '../Text.vue'
 import MysteryWall from '../no/MysteryWall.vue'
 
 const currentFeature = ref('companion')
@@ -94,7 +88,6 @@ const features = [
   { key: 'weather', name: '天气水晶', icon: '🔮' },
   { key: 'zen', name: '森林禅意', icon: '🌿' },
   { key: 'video', name: '视频播放', icon: '▶️' },
-  { key: 'text', name: '文字提纯', icon: '📝' },
   { key: 'particle', name: '粒子互动', icon: '✨' }
 ]
 
