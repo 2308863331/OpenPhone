@@ -44,11 +44,6 @@
         <WeatherCrystal />
       </div>
 
-      <!-- 森林禅意 -->
-      <div v-else-if="currentFeature === 'zen'" class="feature-section">
-        <ZenForest />
-      </div>
-
       <!-- 视频播放器 -->
       <div v-else-if="currentFeature === 'video'" class="feature-section">
         <CandyVideoPlayer 
@@ -75,7 +70,6 @@ import { ref, computed, onMounted } from 'vue'
 import JinShuCompanion from '../JinShuCompanion.vue'
 import PhotoGallery from '../Photo.vue'
 import WeatherCrystal from '../WeatherCrystal.vue'
-import ZenForest from '../ZenForest.vue'
 import CandyVideoPlayer from '../CandyVideoPlayer.vue'
 import MysteryWall from '../no/MysteryWall.vue'
 
@@ -86,7 +80,6 @@ const features = [
   { key: 'companion', name: '锦书伴侣', icon: '📖' },
   { key: 'photo', name: '相册画廊', icon: '📷' },
   { key: 'weather', name: '天气水晶', icon: '🔮' },
-  { key: 'zen', name: '森林禅意', icon: '🌿' },
   { key: 'video', name: '视频播放', icon: '▶️' },
   { key: 'particle', name: '粒子互动', icon: '✨' }
 ]

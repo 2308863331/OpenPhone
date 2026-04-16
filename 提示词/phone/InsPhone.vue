@@ -69,7 +69,14 @@ const externalPages = {
   dreamweaver: () => import('../../DreamWeaver.vue'),
   bottle: () => import('../../no/drift-bottle-lover.vue'),
   'mystery-new': () => import('../../noval/MysteryWall.vue'),
-  zenforest2: () => import('../../ZenForest.vue')
+  'mystery-old': () => import('../../no/MysteryWall.vue'),
+  timecapsule: () => import('../../TimeCapsule.vue'),
+  timetransaction: () => import('../../TimeTransaction.vue'),
+  travel: () => import('../../Travel.vue'),
+  treehouse: () => import('../../src/TreeHouse.vue'),
+  videoplayer: () => import('../../CandyVideoPlayer.vue'),
+  companion: () => import('../../JinShuCompanion.vue'),
+  weathercrystal: () => import('../../WeatherCrystal.vue')
 }
 
 const pageTitles = {
@@ -82,7 +89,14 @@ const pageTitles = {
   dreamweaver: '织梦',
   bottle: '漂流瓶',
   'mystery-new': '秘闻墙',
-  zenforest2: '禅林'
+  'mystery-old': '粒子墙',
+  timecapsule: '时间胶囊',
+  timetransaction: '时光当铺',
+  travel: '旅行日记',
+  treehouse: '秘密基地',
+  videoplayer: '视频播放',
+  companion: '锦书伴侣',
+  weathercrystal: '气象水晶'
 }
 
 const internalPages = ['desktop', 'chatlist', 'chatdetail', 'moments']

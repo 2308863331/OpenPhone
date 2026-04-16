@@ -52,5 +52,46 @@ export const icons = {
     { tag: 'circle', attrs: { cx: '12', cy: '12', r: '10', fill: 'none', stroke: '#fff', strokeWidth: '1.8' }},
     { tag: 'ellipse', attrs: { cx: '12', cy: '12', rx: '4', ry: '10', fill: 'none', stroke: '#fff', strokeWidth: '1.8' }},
     { tag: 'line', attrs: { x1: '2', y1: '12', x2: '22', y2: '12', stroke: '#fff', strokeWidth: '1.8' }}
+  ]},
+  capsule: { viewBox: '0 0 24 24', type: 'multi', elements: [
+    { tag: 'ellipse', attrs: { cx: '12', cy: '12', rx: '9', ry: '5', fill: 'none', stroke: '#fff', strokeWidth: '1.8' }},
+    { tag: 'line', attrs: { x1: '3', y1: '12', x2: '21', y2: '12', stroke: '#fff', strokeWidth: '1.8' }},
+    { tag: 'path', attrs: { d: 'M7 7c1-1.5 3-2.5 5-2.5s4 1 5 2.5M7 17c1 1.5 3 2.5 5 2.5s4-1 5-2.5', fill: 'none', stroke: '#fff', strokeWidth: '1.5' }}
+  ]},
+  pawnshop: { viewBox: '0 0 24 24', type: 'multi', elements: [
+    { tag: 'circle', attrs: { cx: '12', cy: '9', r: '4', fill: 'none', stroke: '#fff', strokeWidth: '1.8' }},
+    { tag: 'path', attrs: { d: 'M6 20V17a6 6 0 0112 0v3', fill: 'none', stroke: '#fff', strokeWidth: '1.8' }},
+    { tag: 'line', attrs: { x1: '12', y1: '13', x2: '12', y2: '17', stroke: '#fff', strokeWidth: '1.8' }}
+  ]},
+  travel: { viewBox: '0 0 24 24', type: 'multi', elements: [
+    { tag: 'path', attrs: { d: 'M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z', fill: 'none', stroke: '#fff', strokeWidth: '1.8' }},
+    { tag: 'circle', attrs: { cx: '12', cy: '10', r: '3', fill: 'none', stroke: '#fff', strokeWidth: '1.8' }}
+  ]},
+  treehouse: { viewBox: '0 0 24 24', type: 'multi', elements: [
+    { tag: 'path', attrs: { d: 'M12 22V8M5 12l7-7 7 7', fill: 'none', stroke: '#fff', strokeWidth: '1.8', strokeLinecap: 'round', strokeLinejoin: 'round' }},
+    { tag: 'path', attrs: { d: 'M3 18l4-4h10l4 4', fill: 'none', stroke: '#fff', strokeWidth: '1.8', strokeLinecap: 'round', strokeLinejoin: 'round' }},
+    { tag: 'circle', attrs: { cx: '12', cy: '5', r: '2', fill: '#fff' }}
+  ]},
+  video: { viewBox: '0 0 24 24', type: 'multi', elements: [
+    { tag: 'polygon', attrs: { points: '5,3 19,12 5,21', fill: '#fff' }}
+  ]},
+  companion: { viewBox: '0 0 24 24', type: 'multi', elements: [
+    { tag: 'path', attrs: { d: 'M4 19.5A2.5 2.5 0 016.5 17H20', fill: 'none', stroke: '#fff', strokeWidth: '1.8', strokeLinecap: 'round' }},
+    { tag: 'path', attrs: { d: 'M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z', fill: 'none', stroke: '#fff', strokeWidth: '1.8' }},
+    { tag: 'line', attrs: { x1: '10', y1: '7', x2: '16', y2: '7', stroke: '#fff', strokeWidth: '1.8', strokeLinecap: 'round' }},
+    { tag: 'line', attrs: { x1: '10', y1: '11', x2: '16', y2: '11', stroke: '#fff', strokeWidth: '1.8', strokeLinecap: 'round' }},
+    { tag: 'line', attrs: { x1: '10', y1: '15', x2: '14', y2: '15', stroke: '#fff', strokeWidth: '1.8', strokeLinecap: 'round' }}
+  ]},
+  crystal: { viewBox: '0 0 24 24', type: 'multi', elements: [
+    { tag: 'polygon', attrs: { points: '12,2 22,9 12,22 2,9', fill: 'none', stroke: '#fff', strokeWidth: '1.8', strokeLinejoin: 'round' }},
+    { tag: 'line', attrs: { x1: '12', y1: '2', x2: '12', y2: '22', stroke: '#fff', strokeWidth: '1.8' }},
+    { tag: 'line', attrs: { x1: '2', y1: '9', x2: '22', y2: '9', stroke: '#fff', strokeWidth: '1.8' }}
+  ]},
+  particle: { viewBox: '0 0 24 24', type: 'multi', elements: [
+    { tag: 'circle', attrs: { cx: '6', cy: '6', r: '2', fill: '#fff' }},
+    { tag: 'circle', attrs: { cx: '18', cy: '8', r: '1.5', fill: '#fff' }},
+    { tag: 'circle', attrs: { cx: '10', cy: '18', r: '2.5', fill: '#fff' }},
+    { tag: 'circle', attrs: { cx: '18', cy: '17', r: '1', fill: '#fff' }},
+    { tag: 'circle', attrs: { cx: '4', cy: '15', r: '1.2', fill: '#fff' }}
   ]}
 }

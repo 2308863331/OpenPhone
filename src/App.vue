@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <nav v-if="viewMode === 'fullscreen'" class="app-nav">
-      <h1 class="nav-title">数字花园</h1>
+嗯      <h1 class="nav-title">数字花园</h1>
       <div style="flex:1"></div>
       <button class="mode-toggle-btn" @click="viewMode = 'phone'" title="切换到小手机">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
@@ -39,24 +39,19 @@ const pages = [
   { key: 'diner', name: '深夜食堂' },
   { key: 'romantic', name: '锦书' },
   { key: 'photo', name: '相册' },
-  { key: 'zenforest', name: '时光胶囊' },
   { key: 'firefly', name: '萤火' },
   { key: 'fate', name: '红线' },
   { key: 'dreamweaver', name: '织梦' },
   { key: 'bottle', name: '漂流瓶' },
-  { key: 'mystery-old', name: '秘闻墙' },
+  { key: 'mystery-old', name: '粒子墙' },
   { key: 'mystery-new', name: '秘闻墙·新版' },
   { key: 'video', name: '视频播放器' },
-  { key: 'greenhouse', name: '云端温室' },
-  { key: 'greenhouse-copy', name: '温室·副本' },
   { key: 'jinshu-companion', name: '锦书伴侣' },
   { key: 'travel', name: '旅行日记' },
   { key: 'weather', name: '气象水晶' },
-  { key: 'zenforest2', name: '禅意森林' },
-  { key: 'zenforest-copy', name: '禅林·副本' },
-  { key: 'bottle-copy', name: '漂流瓶·副本' },
   { key: 'treehouse', name: '秘密基地' },
-  { key: 'time-transaction', name: '时光当铺' }
+  { key: 'time-transaction', name: '时光当铺' },
+  { key: 'timecapsule', name: '时间胶囊' }
 ]
 
 const components = {
@@ -65,7 +60,6 @@ const components = {
   diner: defineAsyncComponent(() => import('../MidnightDiner.vue')),
   romantic: defineAsyncComponent(() => import('../JinShuRomantic/JinShuRomantic.vue')),
   photo: defineAsyncComponent(() => import('../Photo.vue')),
-  zenforest: defineAsyncComponent(() => import('../TimeCapsule.vue')),
   firefly: defineAsyncComponent(() => import('../FireflyDate.vue')),
   fate: defineAsyncComponent(() => import('../RedThreadFate.vue')),
   dreamweaver: defineAsyncComponent(() => import('../DreamWeaver.vue')),
@@ -73,16 +67,12 @@ const components = {
   'mystery-old': defineAsyncComponent(() => import('../no/MysteryWall.vue')),
   'mystery-new': defineAsyncComponent(() => import('../noval/MysteryWall.vue')),
   video: defineAsyncComponent(() => import('../CandyVideoPlayer.vue')),
-  greenhouse: defineAsyncComponent(() => import('../CloudGreenhouse.vue')),
-  'greenhouse-copy': defineAsyncComponent(() => import('../CloudGreenhouse copy.vue')),
   'jinshu-companion': defineAsyncComponent(() => import('../JinShuCompanion.vue')),
   travel: defineAsyncComponent(() => import('../Travel.vue')),
   weather: defineAsyncComponent(() => import('../WeatherCrystal.vue')),
-  zenforest2: defineAsyncComponent(() => import('../ZenForest.vue')),
-  'zenforest-copy': defineAsyncComponent(() => import('../ZenForest copy.vue')),
-  'bottle-copy': defineAsyncComponent(() => import('../drift-bottle-lover copy.vue')),
   treehouse: defineAsyncComponent(() => import('./TreeHouse.vue')),
-  'time-transaction': defineAsyncComponent(() => import('../TimeTransaction.vue'))
+  'time-transaction': defineAsyncComponent(() => import('../TimeTransaction.vue')),
+  timecapsule: defineAsyncComponent(() => import('../TimeCapsule.vue'))
 }
 
 const currentComponent = computed(() => components[currentPage.value])

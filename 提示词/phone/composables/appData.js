@@ -12,13 +12,20 @@ export const desktopApps = reactive([
   { uid: 'd9', label: '漂流瓶', icon: 'msg', gradient: 'linear-gradient(135deg, #07c160 0%, #06ae56 100%)', size: 'standard', page: 'bottle', navType: 'external' },
   { uid: 'd10', label: '萤火', icon: 'widget-book', gradient: 'transparent', size: 'standard', page: 'firefly', navType: 'external' },
   { uid: 'd11', label: '秘闻墙', icon: 'msg', gradient: 'linear-gradient(135deg, #12b7f5 0%, #0d8ecf 100%)', size: 'standard', page: 'mystery-new', navType: 'external' },
+  { uid: 'd12', label: '时间胶囊', icon: 'capsule', gradient: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)', size: 'standard', page: 'timecapsule', navType: 'external' },
+  { uid: 'd13', label: '时光当铺', icon: 'pawnshop', gradient: 'linear-gradient(135deg, #d4a574 0%, #c9956a 100%)', size: 'standard', page: 'timetransaction', navType: 'external' },
+  { uid: 'd14', label: '旅行日记', icon: 'travel', gradient: 'linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)', size: 'standard', page: 'travel', navType: 'external' },
+  { uid: 'd15', label: '秘密基地', icon: 'treehouse', gradient: 'linear-gradient(135deg, #96fbc4 0%, #f9f586 100%)', size: 'standard', page: 'treehouse', navType: 'external' },
+  { uid: 'd16', label: '视频播放', icon: 'video', gradient: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)', size: 'standard', page: 'videoplayer', navType: 'external' },
+  { uid: 'd17', label: '锦书伴侣', icon: 'companion', gradient: 'linear-gradient(135deg, #f5af19 0%, #f12711 100%)', size: 'standard', page: 'companion', navType: 'external' },
+  { uid: 'd18', label: '气象水晶', icon: 'crystal', gradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)', size: 'standard', page: 'weathercrystal', navType: 'external' },
+  { uid: 'd19', label: '粒子墙', icon: 'particle', gradient: 'linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)', size: 'standard', page: 'mystery-old', navType: 'external' }
 ])
 
 export const dockApps = [
   { uid: 'dock1', label: 'Phone', icon: 'phone', gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', page: null, navType: null },
   { uid: 'dock2', label: '朋友圈', icon: 'photo', gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', page: 'moments', navType: 'internal' },
-  { uid: 'dock3', label: '禅林', icon: 'globe', gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', page: 'zenforest2', navType: 'external' },
-  { uid: 'dock4', label: 'Messages', icon: 'msg', gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', page: 'chatlist', navType: 'internal' },
+  { uid: 'dock3', label: 'Messages', icon: 'msg', gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', page: 'chatlist', navType: 'internal' }
 ]
 
 export const conversations = reactive([
